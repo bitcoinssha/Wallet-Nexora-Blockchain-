@@ -1,0 +1,195 @@
+:root {
+  --primary: #d4af37;
+  --bg-dark: #0a0a0a;
+  --bg-light: #ffffff;
+  --text-light: #f0f0f0;
+  --text-dark: #1a1a1a;
+}
+
+[data-theme="dark"] {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+[data-theme="light"] {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+.wallet-container {
+  max-width: 480px;
+  margin: auto;
+  padding: 20px;
+}
+
+.wallet-header {
+  background-color: #111;
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: var(--primary);
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #4ade80;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: #000;
+  font-weight: bold;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wallet-title {
+  font-size: 22px;
+  margin-top: 10px;
+  color: var(--primary);
+}
+
+.wallet-address {
+  font-size: 13px;
+  margin-top: 6px;
+  color: #bbb;
+}
+
+.connection-status {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--primary);
+}
+
+.total-balance {
+  font-size: 32px;
+  color: var(--primary);
+  text-align: center;
+  margin-top: 10px;
+}
+.balance-usd {
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+}
+
+.actions-section {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+.action-btn {
+  background-color: var(--primary);
+  color: #000;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  width: 40%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.action-btn:hover {
+  background-color: #c89b2c;
+}
+
+.token-item {
+  background: #1b1b1b;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.token-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+.nex-icon {
+  background-image: url('https://cryptologos.cc/logos/nexa-nexa-logo.png?v=030');
+  background-size: cover;
+}
+.usdt-icon {
+  background-image: url('https://cryptologos.cc/logos/tether-usdt-logo.png?v=030');
+  background-size: cover;
+}
+
+.token-info {
+  flex-grow: 1;
+}
+.token-name {
+  font-weight: bold;
+}
+.token-symbol {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.token-balance {
+  text-align: right;
+}
+.token-amount {
+  font-weight: bold;
+}
+.token-value {
+  font-size: 12px;
+  color: #888;
+}
+
+.footer {
+  background: #111;
+  padding: 30px;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 40px;
+}
+.footer-logo {
+  font-size: 30px;
+  background-color: var(--primary);
+  color: #000;
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-title {
+  margin-top: 10px;
+  font-size: 18px;
+  color: var(--primary);
+}
+.footer-subtitle {
+  font-size: 12px;
+  color: #ccc;
+  margin-top: 4px;
+}
