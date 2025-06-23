@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexora Wallet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wallet-container">
+    <header class="wallet-header">
+      <div class="header-controls">
+        <div class="network-indicator">
+          <span class="status-dot connected"></span>
+          Nexora Network
+        </div>
+        <div class="clock" id="clock">00:00</div>
+        <div class="theme-toggle" onclick="toggleTheme()">☀️</div>
+      </div>
+
+      <div class="logo">N</div>
+      <div class="wallet-title">Nexora Wallet</div>
+      <div class="wallet-address">0xA1b2...e4f5</div>
+
+      <div class="connection-status">
+        <div class="wallet-connection connected">
+          <span class="connection-dot connected"></span> Conectado
+        </div>
+      </div>
+    </header>
+
+    <section class="balance-section">
+      <div class="total-balance">$300,000</div>
+      <div class="balance-usd">Saldo total en USD</div>
+    </section>
+
+    <section class="tokens-section">
+      <div class="section-title">Tokens</div>
+      <div class="token-item">
+        <div class="token-icon nex-icon"></div>
+        <div class="token-info">
+          <div class="token-name">Nexora Token</div>
+          <div class="token-symbol">NEX</div>
+        </div>
+        <div class="token-balance">
+          <div class="token-amount">1,500</div>
+          <div class="token-value">$150,000</div>
+        </div>
+      </div>
+      <div class="token-item">
+        <div class="token-icon usdt-icon"></div>
+        <div class="token-info">
+          <div class="token-name">USDT Nexora</div>
+          <div class="token-symbol">USDT.N</div>
+        </div>
+        <div class="token-balance">
+          <div class="token-amount">1,500</div>
+          <div class="token-value">$150,000</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="actions-section">
+      <button class="action-btn" onclick="alert('Función de Enviar pronto')">
+        <div class="action-icon">📤</div>
+        <div class="action-label">Enviar</div>
+      </button>
+      <button class="action-btn" onclick="alert('Función de Recibir pronto')">
+        <div class="action-icon">📥</div>
+        <div class="action-label">Recibir</div>
+      </button>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">N</div>
+        <div class="footer-title">Nexora Blockchain</div>
+        <div class="footer-subtitle">Propiedad de Nexora - Todos los derechos reservados</div>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
