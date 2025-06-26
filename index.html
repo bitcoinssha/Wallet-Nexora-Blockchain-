@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nexora Wallet</title>
-  <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="https://i.postimg.cc/ZqGF65LX/nex-token.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="wallet-container">
@@ -13,7 +13,7 @@
       <div class="header-controls">
         <span><span class="status-dot"></span> Nexora Network</span>
         <span class="clock" id="clock">00:00:00</span>
-        <span class="theme-toggle">☀️</span>
+        <span class="theme-toggle" onclick="toggleTheme()">☀️</span>
       </div>
       <div class="logo">N</div>
       <div class="wallet-title">Nexora Wallet</div>
@@ -28,6 +28,7 @@
 
     <div class="tokens-section">
       <div class="section-title">Tokens</div>
+
       <div class="token-item">
         <div class="token-icon">
           <img src="https://i.postimg.cc/ZqGF65LX/nex-token.png" alt="NEX" />
@@ -41,8 +42,9 @@
           <div class="token-value">$1,000,000</div>
         </div>
       </div>
+
       <div class="token-item">
-        <div class="token-icon">
+        <div class="token-icon usdt-logo">
           <img src="https://i.postimg.cc/bJ10gfCr/usdt-nexora.png" alt="USDT" />
         </div>
         <div class="token-info">
@@ -57,8 +59,8 @@
     </div>
 
     <div class="actions-section">
-      <button class="action-btn">Enviar</button>
-      <button class="action-btn">Recibir</button>
+      <button class="action-btn" onclick="openModal('send')">Enviar</button>
+      <button class="action-btn" onclick="openModal('receive')">Recibir</button>
     </div>
 
     <div class="footer">
@@ -67,6 +69,12 @@
         Nexora Blockchain<br />
         Propiedad de Nexora - Todos los derechos reservados
       </div>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="modal">
+    <div class="modal-content" id="modal-content">
+      <!-- Contenido dinámico -->
     </div>
   </div>
 
