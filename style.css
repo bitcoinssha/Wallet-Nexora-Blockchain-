@@ -276,3 +276,12 @@ body.light .wallet-header {
   font-weight: bold;
   cursor: pointer;
 }
+.token-icon.usdt-logo {
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+.token-icon.usdt-logo img {
+  transform: scale(1.2);
+  border-radius: 50%;
+}
