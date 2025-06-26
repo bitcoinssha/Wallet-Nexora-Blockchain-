@@ -1,153 +1,199 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0e0e0e;
-  color: #ffffff;
+  background-color: #121212;
+  color: #fff;
 }
 
-.wallet {
-  max-width: 500px;
+.wallet-container {
+  max-width: 400px;
   margin: 0 auto;
   padding: 20px;
 }
 
-.header {
+.wallet-header {
+  background-color: #1e1e1e;
+  border-radius: 20px;
+  padding: 15px;
   text-align: center;
-  margin-bottom: 20px;
+  position: relative;
+  box-shadow: 0 0 10px #000;
 }
 
-.status-dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background-color: green;
-  border-radius: 50%;
-  margin-right: 8px;
-}
-
-.wallet-time {
-  font-size: 14px;
-  color: #aaa;
-  margin-top: 5px;
-}
-
-.wallet-icon {
-  font-size: 3rem;
-  color: #00ffae;
-}
-
-.wallet-title h1 {
-  margin: 10px 0 0;
-  font-size: 1.8rem;
-  color: #00ffae;
-}
-
-.wallet-address,
-.wallet-connected {
-  font-size: 14px;
-  color: #aaa;
-}
-
-.wallet-balance {
-  font-size: 2rem;
-  color: #00ffae;
-  margin: 5px 0;
-}
-
-.wallet-usd {
+.header-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 0.9rem;
-  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.status-dot,
+.connection-dot {
+  height: 10px;
+  width: 10px;
+  background-color: #0f0;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.clock {
+  font-family: monospace;
+}
+
+.logo {
+  background-color: #ffcc00;
+  color: black;
+  font-weight: bold;
+  font-size: 1.8rem;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+
+.wallet-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.wallet-address {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.connection-status {
+  margin-top: 10px;
+}
+
+.balance-section {
+  background-color: #222;
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px 0;
+}
+
+.total-balance {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.balance-usd {
+  font-size: 0.9rem;
+  color: #aaa;
 }
 
 .tokens-section {
-  margin-top: 30px;
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 20px;
 }
 
-.tokens-section h2 {
-  border-bottom: 1px solid #333;
-  padding-bottom: 10px;
+.section-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
-.token {
+.token-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #1a1a1a;
-  border-radius: 10px;
-  padding: 10px;
-  margin-bottom: 10px;
-  transition: transform 0.2s;
+  padding: 12px 0;
+  border-bottom: 1px solid #333;
 }
 
-.token:hover {
-  transform: scale(1.02);
-}
-
-.token-logo {
-  width: 40px;
-  height: 40px;
+.token-icon {
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  background-color: #fff;
-  object-fit: contain;
+  background-size: cover;
+  background-position: center;
+  margin-right: 10px;
+}
+
+.nex-icon {
+  background-image: url('https://i.postimg.cc/ZqGF65LX/nex-token.png');
+}
+
+.usdt-icon {
+  background-image: url('https://i.postimg.cc/bJ10gfCr/usdt-nexora.png');
 }
 
 .token-info {
-  flex-grow: 1;
-  margin-left: 10px;
+  flex: 1;
+  padding-left: 10px;
 }
 
-.token-info h3 {
-  margin: 0;
-  font-size: 1rem;
+.token-name {
+  font-weight: bold;
 }
 
-.token-info p {
-  margin: 0;
+.token-symbol {
   font-size: 0.8rem;
-  color: #aaa;
+  color: #ccc;
 }
 
-.token-balance h3 {
-  margin: 0;
-  font-size: 1.1rem;
-  color: #00ffae;
+.token-balance {
   text-align: right;
 }
 
-.token-balance p {
-  margin: 0;
-  font-size: 0.8rem;
-  color: #aaa;
-  text-align: right;
+.token-amount {
+  font-weight: bold;
 }
 
-.actions {
+.token-value {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.actions-section {
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
-.send-button,
-.receive-button {
-  background-color: #00ffae;
-  color: #000;
-  padding: 10px 20px;
+.action-btn {
+  background-color: #333;
+  color: white;
   border: none;
   border-radius: 15px;
-  font-weight: bold;
+  padding: 15px;
+  width: 40%;
   font-size: 1rem;
   cursor: pointer;
-  transition: 0.3s ease;
+  box-shadow: 0 0 5px #000;
+  transition: background-color 0.3s ease;
 }
 
-.send-button:hover,
-.receive-button:hover {
-  background-color: #00d297;
+.action-btn:hover {
+  background-color: #444;
+}
+
+.action-icon {
+  font-size: 1.5rem;
 }
 
 .footer {
-  margin-top: 40px;
   text-align: center;
-  font-size: 0.8rem;
-  color: #555;
+  font-size: 0.9rem;
+  margin-top: 30px;
+  color: #aaa;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  color: gold;
+  font-weight: bold;
+}
+
+.footer-title {
+  margin-top: 5px;
+}
+
+.footer-subtitle {
+  font-size: 0.75rem;
 }
