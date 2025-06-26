@@ -1,63 +1,68 @@
-<!DOCTYPE html><html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nexora Wallet</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="wallet-container">
-    <div class="network-status">
+  <div class="container">
+    <div class="header">
       <span class="status-dot"></span>
       <span class="network-name">Nexora Network</span>
-      <span class="network-time" id="clock">--:--:--</span>
-    </div><div class="wallet-card">
-  <div class="wallet-logo">N</div>
-  <div class="wallet-info">
-    <h1>Nexora Wallet</h1>
-    <p class="wallet-address">0xA1b2...e4f5</p>
-    <p class="wallet-status">Conectado</p>
-    <h2 class="wallet-balance">$2,400,000</h2>
-    <p>Saldo total en USD</p>
+      <span id="clock" class="clock"></span>
+    </div>
+
+    <div class="wallet-card">
+      <div class="circle-logo">N</div>
+      <h1 class="title">Nexora Wallet</h1>
+      <p class="address">0xA1b2...e4f5</p>
+      <p class="status">Conectado</p>
+      <h2 class="balance">$2,400,000</h2>
+      <p class="label">Saldo total en USD</p>
+    </div>
+
+    <h3 class="section-title">Tokens</h3>
+
+    <div class="token-card">
+      <img src="https://i.postimg.cc/ZqGF65LX/nex-token.png" alt="NEX Logo" class="token-logo" />
+      <div class="token-info">
+        <span class="token-name">Nexora Token</span>
+        <span class="token-symbol">NEX</span>
+      </div>
+      <div class="token-values">
+        <span class="token-amount">1,000,000</span>
+        <span class="token-usd">$1,000,000</span>
+      </div>
+    </div>
+
+    <div class="token-card">
+      <img src="https://i.postimg.cc/bJ10gfCr/usdt-nexora.png" alt="USDT Logo" class="token-logo large" />
+      <div class="token-info">
+        <span class="token-name">USDT Nexora</span>
+        <span class="token-symbol">USDT</span>
+      </div>
+      <div class="token-values">
+        <span class="token-amount">1,400,000</span>
+        <span class="token-usd">$1,400,000</span>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button class="btn send">📤 Enviar</button>
+      <button class="btn receive">📥 Recibir</button>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-logo">N</div>
+      <div class="footer-text">
+        <p>Nexora Blockchain</p>
+        <p>Propiedad de Nexora - Todos los derechos reservados</p>
+      </div>
+    </footer>
   </div>
-</div>
 
-<div class="tokens-section">
-  <h3>Tokens</h3>
-  <div class="token-card">
-    <img src="https://i.postimg.cc/ZqGF65LX/nex-token.png" class="token-logo" alt="NEX logo">
-    <div class="token-info">
-      <h4>Nexora Token</h4>
-      <p>NEX</p>
-    </div>
-    <div class="token-balance">
-      <strong>1,000,000</strong>
-      <p>$1,000,000</p>
-    </div>
-  </div>
-  <div class="token-card">
-    <img src="https://i.postimg.cc/bJ10gfCr/usdt-nexora.png" class="token-logo large" alt="USDT logo">
-    <div class="token-info">
-      <h4>USDT Nexora</h4>
-      <p>USDT</p>
-    </div>
-    <div class="token-balance">
-      <strong>1,400,000</strong>
-      <p>$1,400,000</p>
-    </div>
-  </div>
-</div>
-
-<div class="actions">
-  <button class="send">Enviar</button>
-  <button class="receive">Recibir</button>
-</div>
-
-<footer class="footer">
-  <p class="footer-logo">N</p>
-  <p>Nexora Blockchain</p>
-  <p>Propiedad de Nexora - Todos los derechos reservados</p>
-</footer>
-
-  </div>  <script src="script.js"></script></body>
+  <script src="script.js"></script>
+</body>
 </html>
