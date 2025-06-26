@@ -2,65 +2,72 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nexora Wallet</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="https://i.postimg.cc/ZqGF65LX/nex-token.png" type="image/png">
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <span class="status-dot"></span>
-      <span class="network-name">Nexora Network</span>
-      <span id="clock" class="clock"></span>
-    </div>
-
-    <div class="wallet-card">
-      <div class="circle-logo">N</div>
-      <h1 class="title">Nexora Wallet</h1>
-      <p class="address">0xA1b2...e4f5</p>
-      <p class="status">Conectado</p>
-      <h2 class="balance">$2,400,000</h2>
-      <p class="label">Saldo total en USD</p>
-    </div>
-
-    <h3 class="section-title">Tokens</h3>
-
-    <div class="token-card">
-      <img src="https://i.postimg.cc/ZqGF65LX/nex-token.png" alt="NEX Logo" class="token-logo" />
-      <div class="token-info">
-        <span class="token-name">Nexora Token</span>
-        <span class="token-symbol">NEX</span>
+  <div class="wallet-container">
+    <div class="wallet-header">
+      <div class="header-controls">
+        <span><span class="status-dot"></span> Nexora Network</span>
+        <span class="clock" id="clock">00:00:00</span>
+        <span class="theme-toggle">☀️</span>
       </div>
-      <div class="token-values">
-        <span class="token-amount">1,000,000</span>
-        <span class="token-usd">$1,000,000</span>
+      <div class="logo">N</div>
+      <div class="wallet-title">Nexora Wallet</div>
+      <div class="wallet-address">0xA1b2...e4f5</div>
+      <div class="wallet-connection">Conectado</div>
+    </div>
+
+    <div class="balance-section">
+      <div class="total-balance">$2,400,000</div>
+      <div class="balance-usd">Saldo total en USD</div>
+    </div>
+
+    <div class="tokens-section">
+      <div class="section-title">Tokens</div>
+      <div class="token-item">
+        <div class="token-icon">
+          <img src="https://i.postimg.cc/ZqGF65LX/nex-token.png" alt="NEX" />
+        </div>
+        <div class="token-info">
+          <div class="token-name">Nexora Token</div>
+          <div class="token-symbol">NEX</div>
+        </div>
+        <div class="token-balance">
+          <div class="token-amount">1,000,000</div>
+          <div class="token-value">$1,000,000</div>
+        </div>
+      </div>
+      <div class="token-item">
+        <div class="token-icon">
+          <img src="https://i.postimg.cc/bJ10gfCr/usdt-nexora.png" alt="USDT" />
+        </div>
+        <div class="token-info">
+          <div class="token-name">USDT Nexora</div>
+          <div class="token-symbol">USDT Tether</div>
+        </div>
+        <div class="token-balance">
+          <div class="token-amount">1,400,000</div>
+          <div class="token-value">$1,400,000</div>
+        </div>
       </div>
     </div>
 
-    <div class="token-card">
-      <img src="https://i.postimg.cc/bJ10gfCr/usdt-nexora.png" alt="USDT Logo" class="token-logo large" />
-      <div class="token-info">
-        <span class="token-name">USDT Nexora</span>
-        <span class="token-symbol">USDT</span>
-      </div>
-      <div class="token-values">
-        <span class="token-amount">1,400,000</span>
-        <span class="token-usd">$1,400,000</span>
-      </div>
+    <div class="actions-section">
+      <button class="action-btn">Enviar</button>
+      <button class="action-btn">Recibir</button>
     </div>
 
-    <div class="buttons">
-      <button class="btn send">📤 Enviar</button>
-      <button class="btn receive">📥 Recibir</button>
-    </div>
-
-    <footer class="footer">
+    <div class="footer">
       <div class="footer-logo">N</div>
       <div class="footer-text">
-        <p>Nexora Blockchain</p>
-        <p>Propiedad de Nexora - Todos los derechos reservados</p>
+        Nexora Blockchain<br />
+        Propiedad de Nexora - Todos los derechos reservados
       </div>
-    </footer>
+    </div>
   </div>
 
   <script src="script.js"></script>
