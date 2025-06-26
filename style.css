@@ -1,4 +1,4 @@
-* {
+  * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,6 +10,12 @@ body {
   color: white;
   min-height: 100vh;
   padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.light {
+  background: #f7f7f7;
+  color: #111;
 }
 
 .wallet-container {
@@ -21,11 +27,20 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
+body.light .wallet-container {
+  background: #fff;
+  color: #111;
+}
+
 .wallet-header {
   padding: 20px;
   text-align: center;
   background: #000;
   position: relative;
+}
+
+body.light .wallet-header {
+  background: #eee;
 }
 
 .header-controls {
@@ -125,12 +140,19 @@ body {
   overflow: hidden;
   margin-right: 10px;
   flex-shrink: 0;
+  background: white;
+  padding: 2px;
 }
 
 .token-icon img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* USDT logo más grande */
+.token-icon.usdt-logo img {
+  transform: scale(1.2);
 }
 
 .token-info {
@@ -208,6 +230,49 @@ body {
   margin-bottom: 5px;
 }
 
-.footer-text {
-  line-height: 1.4;
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #222;
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 300px;
+}
+
+.modal-content p {
+  font-size: 14px;
+}
+
+.modal-content .note-red {
+  color: #ff4444;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.modal-content button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: #d4af37;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
 }
