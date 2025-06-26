@@ -2,100 +2,67 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nexora Wallet</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .nex-icon {
-      width: 40px;
-      height: 40px;
-      background-image: url('https://cryptologos.cc/logos/custom/nexora-logo.png'); /* Cambia si usas otro host */
-      background-size: cover;
-      border-radius: 50%;
-    }
-
-    .usdt-icon {
-      width: 40px;
-      height: 40px;
-      background-image: url('https://cryptologos.cc/logos/tether-usdt-logo.png'); /* Verde clásico USDT */
-      background-size: cover;
-      border-radius: 50%;
-    }
-  </style>
 </head>
 <body>
-  <div class="wallet-container">
-    <header class="wallet-header">
-      <div class="header-controls">
-        <div class="network-indicator">
-          <span class="status-dot connected"></span>
-          Nexora Network
-        </div>
-        <div class="clock" id="clock">00:00</div>
-        <div class="theme-toggle" onclick="toggleTheme()">☀️</div>
+  <div class="wallet">
+    <div class="header">
+      <div class="network-status">
+        <span class="status-dot online"></span> Nexora Network
       </div>
-
-      <div class="logo">N</div>
-      <div class="wallet-title">Nexora Wallet</div>
-      <div class="wallet-address">0xA1b2...e4f5</div>
-
-      <div class="connection-status">
-        <div class="wallet-connection connected">
-          <span class="connection-dot connected"></span> Conectado
-        </div>
+      <div class="wallet-time">
+        🌞 <span id="clock">--:--:--</span> a.m.
       </div>
-    </header>
+      <div class="wallet-title">
+        <span class="wallet-icon">N</span>
+        <h1>Nexora Wallet</h1>
+        <p class="wallet-address">0xA1b2...e4f5</p>
+        <p class="wallet-connected">Conectado</p>
+        <h2 class="wallet-balance">$2,400,000</h2>
+        <p class="wallet-usd">Saldo total en USD</p>
+      </div>
+    </div>
 
-    <section class="balance-section">
-      <div class="total-balance">$2,400,000</div>
-      <div class="balance-usd">Saldo total en USD</div>
-    </section>
+    <div class="tokens-section">
+      <h2>Tokens</h2>
 
-    <section class="tokens-section">
-      <div class="section-title">Tokens</div>
-      <div class="token-item">
-        <div class="token-icon nex-icon"></div>
+      <div class="token">
+        <img src="https://i.postimg.cc/ZqGF65LX/nex-token.png" alt="NEX Logo" class="token-logo" />
         <div class="token-info">
-          <div class="token-name">Nexora Token</div>
-          <div class="token-symbol">NEX</div>
+          <h3>Nexora Token</h3>
+          <p>NEX</p>
         </div>
         <div class="token-balance">
-          <div class="token-amount">1,000,000</div>
-          <div class="token-value">$1,000,000</div>
+          <h3>1,000,000</h3>
+          <p>$1,000,000</p>
         </div>
       </div>
-      <div class="token-item">
-        <div class="token-icon usdt-icon"></div>
+
+      <div class="token">
+        <img src="https://i.postimg.cc/bJ10gfCr/usdt-nexora.png" alt="USDT Logo" class="token-logo" />
         <div class="token-info">
-          <div class="token-name">USDT Nexora</div>
-          <div class="token-symbol">USDT Tether </div>
+          <h3>USDT Nexora</h3>
+          <p>USDT</p>
         </div>
         <div class="token-balance">
-          <div class="token-amount">1,400,000</div>
-          <div class="token-value">$1,400,000</div>
+          <h3>1,400,000</h3>
+          <p>$1,400,000</p>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="actions-section">
-      <button class="action-btn" onclick="alert('Función de Enviar pronto')">
-        <div class="action-icon">📤</div>
-        <div class="action-label">Enviar</div>
-      </button>
-      <button class="action-btn" onclick="alert('Función de Recibir pronto')">
-        <div class="action-icon">📥</div>
-        <div class="action-label">Recibir</div>
-      </button>
-    </section>
+    <div class="actions">
+      <button class="send-button">Enviar</button>
+      <button class="receive-button">Recibir</button>
+    </div>
 
     <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-logo">N</div>
-        <div class="footer-title">Nexora Blockchain</div>
-        <div class="footer-subtitle">Propiedad de Nexora - Todos los derechos reservados</div>
-      </div>
+      <p><strong>N</strong><br>Nexora Blockchain<br>Propiedad de Nexora - Todos los derechos reservados</p>
     </footer>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
