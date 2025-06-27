@@ -79,5 +79,53 @@
   </div>
 
   <script src="script.js"></script>
+  <!-- Web3 y conexión MetaMask -->
+<script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+<script>
+  let web3;
+  let currentAccount;
+
+  async function conectarWallet() {
+    if (typeof window.ethereum !== 'undefined') {
+      try {
+        // Solicita acceso a cuentas
+        await window.ethereum.request({ method: 'eth_requestAccounts' });
+
+        web3 = new Web3(window.ethereum);
+        const accounts = await web3.eth.getAccounts();
+        currentAccount = accounts[0];
+
+        // Mostrar dirección en la wallet
+        document.querySelector('.wallet-address').textContent = currentAccount.slice(0, 6) + "..." + currentAccount.slice(-4);
+
+        // Mostrar saldo en NEX
+        const balance = await web3.eth.getBalance(currentAccount);
+        const saldoEth = web3.utils.fromWei(balance, 'ether');
+        document.querySelector('.total-balance').textContent = parseFloat(saldoEth).toFixed(2) + ' NEX';
+
+        // Detectar red
+        const chainId = await web3.eth.getChainId();
+        const status = document.querySelector('.wallet-connection');
+        const dot = document.querySelector('.status-dot');
+
+        if (chainId == 12025) {
+          status.textContent = "Conectado a Nexora";
+          dot.style.background = "#4CAF50"; // Verde
+        } else {
+          status.textContent = "Red incorrecta";
+          dot.style.background = "red";
+        }
+
+      } catch (error) {
+        console.error("Conexión rechazada:", error);
+      }
+    } else {
+      alert('MetaMask no está instalada');
+    }
+  }
+
+  // Ejecutar al cargar la página
+  window.addEventListener('load', conectarWallet);
+</script>
 </body>
 </html>
